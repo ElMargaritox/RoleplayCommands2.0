@@ -65,17 +65,17 @@ namespace RoleplayCommands
 
             if(this.modo.ToLower() == "global" & !this.isanonymous)
             {
-                ChatManager.serverSendMessage(string.Format(this.message, player.CharacterName, mensaje), Color.white, null, null, EChatMode.GLOBAL, this.icon, true);
+                ChatManager.serverSendMessage(string.Format(this.message, player.CharacterName, mensaje).Replace('(', '<').Replace(')', '>'), Color.white, null, null, EChatMode.GLOBAL, this.icon, true);
                 return;
             }
             else if(this.modo.ToLower() == "area" & !this.isanonymous)
             {
-                ChatManager.serverSendMessage(string.Format(this.message, mensaje), Color.white, null, null, EChatMode.LOCAL, this.icon, true);
+                ChatManager.serverSendMessage(string.Format(this.message, mensaje).Replace('(', '<').Replace(')', '>'), Color.white, null, null, EChatMode.LOCAL, this.icon, true);
                 return;
             }
             else if(this.modo.ToLower() == "global" & this.isanonymous)
             {
-                ChatManager.serverSendMessage(string.Format(this.message, mensaje), Color.white, null, null, EChatMode.GLOBAL, this.icon, true);
+                ChatManager.serverSendMessage(string.Format(this.message, mensaje).Replace('(', '<').Replace(')', '>'), Color.white, null, null, EChatMode.GLOBAL, this.icon, true);
                 return;
             }
             else

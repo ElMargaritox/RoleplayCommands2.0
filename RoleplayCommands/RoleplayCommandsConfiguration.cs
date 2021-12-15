@@ -11,7 +11,7 @@ namespace RoleplayCommands
 {
     public class RoleplayCommandsConfiguration : IRocketPluginConfiguration
     {
-        [XmlArray("RPCommands"), XmlArrayItem(ElementName = "Commands")]
+        [XmlArrayItem(ElementName = "Command")]
         public List<RPCommand> RPCommands { get; set; }
         public void LoadDefaults()
         {

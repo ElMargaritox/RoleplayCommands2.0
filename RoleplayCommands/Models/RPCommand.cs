@@ -10,15 +10,15 @@ namespace RoleplayCommands.Models
     public class RPCommand
     {
         public RPCommand() { }
-        [XmlElement("CommandName")]
+        [XmlText]
         public string CommandName;
-        [XmlElement("Message")]
+        [XmlAttribute("Message")]
         public string Message;
-        [XmlElement("Image")]
+        [XmlAttribute("Image")]
         public string Image;
-        [XmlElement("ChatMode")]
+        [XmlAttribute("ChatMode")]
         public string ChatMode;
-        [XmlElement("IsAnonymous")]
+        [XmlAttribute("Anonymous")]
         public bool IsAnonymous;
     }
 }
